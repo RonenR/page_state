@@ -1,8 +1,8 @@
 node_modules
 .idea
 .firebase
+build
 
-/webpack-frontend-project-template/pub
 no-git
 package-lock.json
 */package-lock.json
