@@ -1,11 +1,11 @@
 {
   "name": "page_state",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Simple straightforward tool to manage webpage state on the client side and hook state to html tags on page without code",
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
-    "prepublishOnly": "mkdir build; browserify browserify.js > build/bundle.js; terser build/bundle.js -c drop_console=true > build/bundle.min.js; git add .; npm version patch -m \"Release %s\" -f"
+    "prepublishOnly": "mkdir build; browserify browserify.js > build/bundle.js; terser build/bundle.js -c drop_console=true > build/bundle.min.js; git add .; npm version patch -m \"Release %s\" -f; git push;"
   },
   "repository": {
     "type": "git",
