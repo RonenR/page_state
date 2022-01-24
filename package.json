@@ -1,6 +1,6 @@
 {
-  "name": "page_state",
-  "version": "0.0.4",
+  "name": "web_page_state",
+  "version": "0.0.5",
   "description": "Simple straightforward tool to manage webpage state on the client side and hook state to html tags on page without code",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,7 @@
   ],
   "author": "Ronen Rabinovici",
   "license": "MIT",
+  "private": false,
   "bugs": {
     "url": "https://github.com/RonenR/page_state/issues"
   },
