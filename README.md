@@ -3,6 +3,15 @@
 Utility hooks to help organize a site's client-side state, and easily change the view according to state through html data attributes.
 Conceptually combines ideas from Bootstrap & Redux.    
 
+[See published npm package](https://www.npmjs.com/package/web_page_state)
+
+## Import:
+
+- Web: `<script src="https://unpkg.com/page_state/build/bundle.min.js"></script>`
+- Node: `npm i web_page_state`
+
+
+## How to use?
 
 **- HTML**
 
