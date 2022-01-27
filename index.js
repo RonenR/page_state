@@ -9,6 +9,7 @@ class PageState {
         let index = PageState.listenersAvailableIndex;
         PageState.listeners[index] = onStateUpdate;
         PageState.listenersAvailableIndex++;
+        onStateUpdate(PageState.pageState);  // Send the first update upon registering.
         return index;
     }
 
