@@ -23,16 +23,17 @@ Conceptually combines ideas from Bootstrap & Redux.
       
 **- js**
 
-| Property                  | Type                 | Description                                                                                                                                                                                                                         |
-|---------------------------|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| pageState                 | Object                                                   | Holds the raw state.                                                                                                                                                                                                                |
-| updatePageStateWithParams | Function                                                 | Examples: <br/> `updatePageStateWithParams({countryName: "Brazil"})`                                                                                                                                                                | 
-| toastNotification         | Function                                                 | Example: `toastNotification("Copied", "Successfully copied to clipboard", false, false);`                                                                                                                                           | 
-| dismissNotification       | Function                                                 | Remove previously toasted notification                                                                                                                                                                                              | 
-| setUser                   | Function                                                 | Examples:<br>- On sign in: `setUser({name: "Ronen", uid: "987dkjbc987"});`  <br>- On sign out: `setUser(null);`                                                                                                                     | 
-| getParam                  | Function                                                 | `getParam("user.uid");`                                                                                                                                                                                                             | 
+| Property                  | Type                 | Description                                                                                                                                                                                                                          |
+|---------------------------|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| pageState                 | Object                                                   | Holds the raw state.                                                                                                                                                                                                                 |
+| updatePageStateWithParams | Function                                                 | Examples: <br/> `updatePageStateWithParams({countryName: "Brazil"})`                                                                                                                                                                 | 
+| toastNotification         | Function                                                 | Example: `toastNotification("Copied", "Successfully copied to clipboard", false, false);`                                                                                                                                            | 
+| dismissNotification       | Function                                                 | Remove previously toasted notification                                                                                                                                                                                               | 
+| setUser                   | Function                                                 | Examples:<br>- On sign in: `setUser({name: "Ronen", uid: "987dkjbc987"});`  <br>- On sign out: `setUser(null);`                                                                                                                      | 
+| getParam                  | Function                                                 | `getParam("user.uid");`                                                                                                                                                                                                              | 
+| toggleParam                  | Function                                                 | `toggleParam("isFullScreen");`                                                                                                                                                                                                       | 
 | registerListener          | Function                                                 | Returns the index / id as number of the new listener. This index can be used to remove the listener. Example: `let index = PageState.registerListener(function(newState){/* do something */}); PageState.unregisterListener(index);` | 
-| unregisterListener        | Function                                                 | Use the index generated when 'registered'. Example: `let index = PageState.registerListener(function(newState){/* do something */}); PageState.unregisterListener(index);`             | 
+| unregisterListener        | Function                                                 | Use the index generated when 'registered'. Example: `let index = PageState.registerListener(function(newState){/* do something */}); PageState.unregisterListener(index);`                                                           | 
 
 **- State's special keys - do not set directly**
 
@@ -78,3 +79,8 @@ This is used on the following sites:
 - In `data-ws-show-if-not` we let the function - if exists - override the property, which is inconsistent with the non-negated `data-ws-show-if`...
 - Prohibit direct setting of reserved props / functions by mistake?
 - Set/get style to the element's html set style prior to setting it to "none"
+
+# How to contribute & publish updates to this package?
+- This package is published both on GitHub and on npmjs.
+- To publish an updated version - simply run `npm publish`, it will commit & push updates both to github and npm.
+

@@ -357,6 +357,14 @@ class PageState {
         return resolvePath(PageState.pageState, keyPath);
     }
 
+    static toggleParam(keyPath) {
+        if (keyPath===undefined || keyPath===null || keyPath.length==0) {
+            return null;
+        }
+
+        PageState.updatePageStateWithParams(!Boolean(PageState.getParam(keyPath)));
+    }
+
     static init() {
         PageState.listeners = {};
         PageState.listenersAvailableIndex = 0;
