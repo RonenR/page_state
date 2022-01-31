@@ -357,7 +357,7 @@ class PageState {
             return null;
         }
 
-        PageState.updatePageStateWithParams(!Boolean(PageState.getParam(keyPath)));
+        PageState.updatePageStateWithParams({keyPath: !Boolean(PageState.getParam(keyPath))});
     }
 
     static init() {
